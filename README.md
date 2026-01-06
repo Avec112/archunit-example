@@ -27,7 +27,8 @@ Coding rules are defined in `src/test/java/io/github/avec112/archunit/CodingRule
 
 These tests ensure that:
 *   No classes use `System.out` or `System.err`.
-*   No classes use generic exceptions.
+*   No classes use generic exceptions (`Exception`, `RuntimeException`, `Throwable`).
+*   No classes use `printStackTrace()`.
 
 ## Running Tests
 
