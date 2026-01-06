@@ -1,4 +1,4 @@
-package io.github.avec112;
+package io.github.avec112.ui.greet;
 
 import com.vaadin.flow.component.button.testbench.ButtonElement;
 import com.vaadin.flow.component.html.testbench.ParagraphElement;
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.Keys;
 
-public class MainViewIT extends BrowserTestBase {
+public class GreetViewIT extends BrowserTestBase {
 
     /**
      * If running on CI, get the host name from environment variable HOSTNAME
@@ -26,7 +26,7 @@ public class MainViewIT extends BrowserTestBase {
 
     @BeforeEach
     public void open() {
-        getDriver().get("http://" + getDeploymentHostname() + ":8080/");
+        getDriver().get("http://" + getDeploymentHostname() + ":8080/greet");
     }
 
     @BrowserTest

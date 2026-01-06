@@ -1,4 +1,4 @@
-package io.github.avec112;
+package io.github.avec112.ui.greet;
 
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
@@ -7,6 +7,8 @@ import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
+import io.github.avec112.domain.greet.GreetRepository;
+import io.github.avec112.domain.greet.GreetService;
 
 /**
  * A sample Vaadin view class.
@@ -20,8 +22,10 @@ import com.vaadin.flow.router.Route;
  * The main view contains a text field for getting the user name and a button
  * that shows a greeting message in a notification.
  */
-@Route
-public class MainView extends VerticalLayout {
+@Route("greet")
+public class GreetView extends VerticalLayout {
+
+//    private GreetRepository greetRepository; // Not allowed
 
     /**
      * Construct a new Vaadin view.
@@ -31,7 +35,7 @@ public class MainView extends VerticalLayout {
      * @param service
      *            The message service. Automatically injected Spring managed bean.
      */
-    public MainView(GreetService service) {
+    public GreetView(GreetService service) {
 
         // Use TextField for standard text input
         TextField textField = new TextField("Your name");

@@ -22,6 +22,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
 public class Application implements AppShellConfigurator {
 
     public static void main(String[] args) {
+        System.out.println("Starting application..."); // allowed here
         SpringApplication.run(Application.class, args);
     }
 }
